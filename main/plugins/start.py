@@ -7,7 +7,7 @@ from telethon import events, Button, TelegramClient
 from pyrogram import idle
 from main.plugins.main import Bot, userbot
 
-st = "__ **HEY Buddy 🤡 Send me Link of any message to clone it here \n\n For private channel message, Send invite link first.\n\n SUPPORT: @OFF_CHATS\n🔆 POWERD BY :- @TEAM_SILENT_KING 🔆\nDEV: @ITS_NOT_ROMEO ** __"
+st = "--__ **HEY Buddy 🤡 Send me Link of message to clone it here\n 👻 FOR PUBLIC CHANNEL SEND DIRECT LINK 👻 \n ⚜️ For private channel message, Send invite link first ⚜️.\n\n 👩🏻‍💻👨🏻‍💻SUPPORT: @OFF_CHATS 👩🏻‍💻👨🏻‍💻\n🔆 POWERD BY :- @TEAM_SILENT_KING 🔆\n 🔰DEV: @ITS_NOT_ROMEO 🔰 ** __--"
 
 @bot.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
@@ -33,7 +33,7 @@ async def sett(event):
     msg = await button.get_reply_message() 
     await event.delete()
     async with Drone.conversation(event.chat_id) as conv: 
-        xx = await conv.send_message("Send me any image for thumbnail as a `reply` to this message. ")
+        xx = await conv.send_message("Send me any image for thumbnail as a `reply` to this message. \n🔆 POWERD BY :- @TEAM_SILENT_KING 🔆")
         x = await conv.get_reply()
         if not x.media:
             xx.edit("No media found.")
