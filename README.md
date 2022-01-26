@@ -1,11 +1,6 @@
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=groupdcbots&repo=savecontentbot&theme=tokyonight)](https://github.com/groupdcbots/savecontentbot&bg_color=#24292F)
 
 
-<p align="center">
-  <img src="assets/logo" alt="Savecontentbot">
-</p>
-<h1 align="center">
-  <b>Autofilterv5</b>
 </h1># Save Restricted Content Bot
 
 A simple telegram bot to save restricted content with custom thumbmail support by Mahesh Chauhan.
