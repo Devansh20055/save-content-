@@ -7,7 +7,7 @@ from telethon import events, Button, TelegramClient
 from pyrogram import idle
 from main.plugins.main import Bot, userbot
 
-st = "HEY {mention} Buddy 🤡 __Send me Link of any message to clone it here, For private channel message, Send invite link first.__\n\nSUPPORT: @OFF_CHATS\nDEV: @ITS_NOT_ROMEO"
+st = "<i> HEY  Buddy 🤡 __Send me Link of any message to clone it here, For private channel message, Send invite link first.__\n\nSUPPORT: @OFF_CHATS\nDEV: @ITS_NOT_ROMEO </i>"
 
 @bot.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
@@ -58,6 +58,6 @@ async def remt(event):
         os.remove(f'{event.sender_id}.jpg')
         await event.edit('Removed!')
     except Exception:
-        await event.edit("No thumbnail saved.🔆 POWERD BY :- @TEAM_SILENT_KING 🔆")                        
+        await event.edit("No thumbnail saved.\n\n 🔆 POWERD BY :- @TEAM_SILENT_KING 🔆")                        
     
     
