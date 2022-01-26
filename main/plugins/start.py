@@ -7,7 +7,7 @@ from telethon import events, Button, TelegramClient
 from pyrogram import idle
 from main.plugins.main import Bot, userbot
 
-st = "Oii Buddy 🤡 __Send me Link of any message to clone it here, For private channel message, Send invite link first.__\n\nSUPPORT: @groupdcbots\nDEV: @selfiebd"
+st = "HEY {mention} Buddy 🤡 __Send me Link of any message to clone it here, For private channel message, Send invite link first.__\n\nSUPPORT: @OFF_CHATS\nDEV: @ITS_NOT_ROMEO"
 
 @bot.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
@@ -33,7 +33,7 @@ async def sett(event):
     msg = await button.get_reply_message() 
     await event.delete()
     async with Drone.conversation(event.chat_id) as conv: 
-        xx = await conv.send_message("Send me any image for thumbnail as a `reply` to this message. @groupdc")
+        xx = await conv.send_message("Send me any image for thumbnail as a `reply` to this message. ")
         x = await conv.get_reply()
         if not x.media:
             xx.edit("No media found.")
@@ -41,14 +41,14 @@ async def sett(event):
         if not 'png' in mime:
             if not 'jpg' in mime:
                 if not 'jpeg' in mime:
-                    return await xx.edit("No image found. @groupdcbots")
+                    return await xx.edit("No image found. ")
         await xx.delete()
         t = await event.client.send_message(event.chat_id, 'Trying.')
         path = await event.client.download_media(x.media)
         if os.path.exists(f'{event.sender_id}.jpg'):
             os.remove(f'{event.sender_id}.jpg')
         os.rename(path, f'./{event.sender_id}.jpg')
-        await t.edit("Temporary thumbnail saved! @groupdcbots")
+        await t.edit("Temporary thumbnail saved! \n\n 🔆 POWERD BY :- @TEAM_SILENT_KING 🔆")
         
 @bot.on(events.callbackquery.CallbackQuery(data="remt"))
 async def remt(event):  
@@ -58,6 +58,6 @@ async def remt(event):
         os.remove(f'{event.sender_id}.jpg')
         await event.edit('Removed!')
     except Exception:
-        await event.edit("No thumbnail saved. @groupdcbots")                        
+        await event.edit("No thumbnail saved.🔆 POWERD BY :- @TEAM_SILENT_KING 🔆")                        
     
     
