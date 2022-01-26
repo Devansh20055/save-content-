@@ -10,7 +10,7 @@ import asyncio, subprocess, re, os, time
 async def join(client, invite_link):
     try:
         await client.join_chat(invite_link)
-        return "Successfully joined the Channel🚀 \n\n SHARE ME <a href='https://t.me/share/url?url=http://t.me/save_restricted_bot' >🔰 SHARE ME 👻</a>"
+        return "Successfully joined the Channel🚀 "
     except BadRequest:
         return "Could not join. Maybe your link is expired or Invalid.⚠️"
     except FloodWait:
