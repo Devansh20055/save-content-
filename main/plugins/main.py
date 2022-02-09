@@ -117,7 +117,7 @@ async def clone(bot, event):
         except FloodWait:
             return await edit.edit('Too many requests, try again later.')
         except ValueError:
-            return await edit.edit('Send Only message link or Private channel invites  @groupdc .')
+            return await edit.edit('Send Only message link or Private channel invites  @TEAM_SILENT_KING .')
         except Exception as e:
             return await edit.edit(f'Error: `{str(e)}`')         
           
